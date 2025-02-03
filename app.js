@@ -38,7 +38,7 @@ const isPerfect = (num) => {
 };
 
 // API Route
-app.get("/api/classify-number", async (req, res) => {
+app.get("http://app-35fe204e-7341-4c38-bd4c-ea9b270dd9e5.cleverapps.io//api/classify-number", async (req, res) => {
     const { number } = req.query;
 
     if (!number || isNaN(number)) {
