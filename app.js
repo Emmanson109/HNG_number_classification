@@ -36,7 +36,7 @@ const isPerfect = (num) => {
 };
 
 // API Route
-app.get("/", async (req, res) => {
+app.get("https://hng-number-classification.onrender.com/api/classify-number", async (req, res) => {
     const { number } = req.query;
 
     if (!number || isNaN(number)) { 
