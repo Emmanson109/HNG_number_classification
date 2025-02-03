@@ -6,8 +6,6 @@ const app = express();
 app.use(cors()); // Enable CORS
 
 
-//middlewares
-
 // Function to check if a number is prime
 const isPrime = (num) => {
     if (num < 2) return false;
@@ -38,10 +36,10 @@ const isPerfect = (num) => {
 };
 
 // API Route
-app.get("http://app-35fe204e-7341-4c38-bd4c-ea9b270dd9e5.cleverapps.io//api/classify-number", async (req, res) => {
+app.get("/api/classify-number", async (req, res) => {
     const { number } = req.query;
 
-    if (!number || isNaN(number)) {
+    if (!number || isNaN(number)) { 
         return res.status(400).json({ number, error: true });
     }
 
